@@ -10,11 +10,34 @@ export default function formdisplay()
 
     function submit()
     {
-        if(!)
+     
+        if(typeof first !== "string" || !first.trim())
+        {
+            setError("First name required");
+            return;
+        }
+
+        if(typeof last !== "string" || !last.trim())
+        {
+            setError("Last name required");
+            return;
+        }
+
+        if (!dob.match(/^\d{4}-\d{2}-\d{2}$/)) 
+        {
+            setError("Date of birth must be in YYYY-MM-DD format.");
+            return;
+        }
+
+        if(typeof grade !== "number" || grade <= 0 || grade > 12)
+        {
+            setError("Grade required");
+            return;
+        }
     }
 
 
-    {/**Clear after submit form */}
+   
     setFirst("");
     setLast("");
     setDob("");
