@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from "react";
-export default function formdisplay()
+export default function Formdisplay()
 {
     const [first, setFirst] = useState("");
     const [last, setLast] = useState("");
