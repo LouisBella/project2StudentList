@@ -5,23 +5,30 @@ export default function Navbar()
     return(
         <nav className ="nav">
 
-            <a href="/" className="school">School</a>
+            <a href="/" className="school">Insert HighSchool Name Here</a>
 
             <ul>
                 <li>
-                    <a href="/1"></a>
+                    <a href="/">Home</a>
                 </li>
 
                 <li>
-                    <a href ="/2"></a>
+                    <a href ="/">About</a>
                 </li>
 
 
                 <li>
-                    <a href ="/3"></a>
+                    <a href ="/">Students</a>
                 </li>
 
-                
+                <li>
+                    <a href="/">Learning</a>
+                </li>
+
+                <li>
+                    <a href="/">Contact</a>
+                </li>
+
             </ul>
         </nav>
     )

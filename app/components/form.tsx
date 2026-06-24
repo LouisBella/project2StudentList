@@ -1,21 +1,39 @@
 import React from 'react';
-
+import {useState} from "react";
 export default function formdisplay()
 {
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
+    const [dob, setDob] = useState("");
+    const [grade, setGrade] = useState("");
+    const [error, setError] = useState("");
+
+    function submit()
+    {
+        if(!)
+    }
+
+
+    {/**Clear after submit form */}
+    setFirst("");
+    setLast("");
+    setDob("");
+    setGrade("");
     return(
         <div>
             <form>
                 
-                <label htmlFor="firstAndLast">
-                    First and Last name
+                <label htmlFor="first">
+                    First 
                 </label>
-                <input type="text" name="firstAndLast"/>
+                <input type="text" name="first"/>
+
+                <label htmlFor="last">
+                    Last
+                </label>
+                <input type ="text" name="last"/>
            
 
-                
-                {/***
-                 * Don't think I need to add a calendar here?
-                 */}
 
                 <label htmlFor="dob">
                     Date of Birth. Please input the in the format of YYYY-MM-DD.
@@ -25,10 +43,10 @@ export default function formdisplay()
 
 
 
-                <label htmlFor="curGrade">
+                <label htmlFor="grade">
                     Current Grade
                 </label>
-                <input type="text" name="curGrade"/>
+                <input type="text" name="grade"/>
               
 
 
@@ -41,6 +59,3 @@ export default function formdisplay()
     )
 }
 
-
-
-{/** Function to connect html with the react?  */}

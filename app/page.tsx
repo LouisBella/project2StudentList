@@ -1,10 +1,9 @@
 import {useState} from "react";
-import Navbar from "./components/navbar.tsx"
+import students from "app/Studentlist.tsx";
+import StudenCard from "./components/studentcard";
 
 export default function Home() {
   return (
-    <div>
-
-    </div>
+    
   );
 }
