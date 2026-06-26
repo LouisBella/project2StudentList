@@ -38,6 +38,7 @@ export default function Formdisplay({ addstudent }: { addstudent: Function }) {
     }
     return (
         <div>
+            {error ? <p style={{ color: "red" }}>{error}</p> : null}
             <form>
 
                 <label htmlFor="first">
