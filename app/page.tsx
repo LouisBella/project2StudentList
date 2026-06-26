@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <>
     <div className="bg-black-50 min-h-screen">
-      <Navbar />
       <main className="max-w-4xl p-8">
         <div className="border-b border-black-400 pb-2 mb-4">
           <h1 className="font-bold text-black-800">List of Students</h1>
@@ -34,7 +33,6 @@ export default function Home() {
          <FormDisplay addstudent={addstudent} />
         </div>
       </main>
-      <Footer />
     </div>
       
     </>
