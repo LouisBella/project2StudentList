@@ -11,10 +11,7 @@ export default function Home() {
 
   const [Studentlist, setStudents] = useState(students);
 
-  function addstudent(studentData: { firstName: string; lastName: string; dob: string; grade: number }) {
-
-    console.log("Adding student:", studentData);
-
+  function addstudent(studentData: StudentData) {
     const newId = Studentlist.length + 1;
     const newStudent = {
       id: newId,
