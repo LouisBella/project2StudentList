@@ -11,15 +11,17 @@ export default function Home() {
 
   const [Studentlist, setStudents] = useState(students);
 
-  function addstudent(studentData: { first: string; last: string; dob: string; grade: number }) {
+  function addstudent(studentData: { firstName: string; lastName: string; dob: string; grade: number }) {
+
+    console.log("Adding student:", studentData);
 
     const newId = Studentlist.length + 1;
     const newStudent = {
       id: newId,
-      firstName: studentData.first,
-      lastName: studentData.last,
+      firstName: studentData.firstName,
+      lastName: studentData.lastName,
       dob: studentData.dob,
-      grade: studentData.grade,
+      grade: Number(studentData.grade),
     };
     setStudents([...Studentlist, newStudent]);
   }
@@ -48,19 +50,19 @@ export default function Home() {
           <div className="border-b border-black-400 pb-2 mb-4">
             <h1 className="font-bold text-black-800">List of Students</h1>
           </div>
-          <div className="flex flex-col gap-15">
-            <div className="felx flex-col gap-4">
-              {Studentlist.map((student) => (
-                <StudentCard
-                  key={student.id}
-                  first={student.firstName}
-                  last={student.lastName}
-                  dob={student.dob}
-                  grade={student.grade}
-                />
-              ))}
-            </div>
+
+          <div className="flex flex-row flex-wrap">
+            {Studentlist.map((student) => (
+              <StudentCard
+                key={student.id}
+                firstName={student.firstName}
+                lastName={student.lastName}
+                dob={student.dob}
+                grade={student.grade}
+              />
+            ))}
           </div>
+
           <div className="border-b border-black-400 pb-2 mb-4">
             <h2 className="font-bold text-black-800">Register a New Student</h2>
             <form
